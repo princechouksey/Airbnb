@@ -1,0 +1,11 @@
+undefined  error - 500 - User unauthorized - POST - /api/auth/logout - ::1
+undefined  error - 500 - User unauthorized - POST - /api/auth/logout - ::1
+undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+2025-04-26T05:29:52.976Z  error - 500 - Cannot read properties of undefined (reading '_id') - POST - /api/property/create - ::1
+2025-04-26T05:39:19.607Z  error - 500 - next is not defined - PUT - /api/property/update/680c7168fbaba36d7338d577 - ::1
