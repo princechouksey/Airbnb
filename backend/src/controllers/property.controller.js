@@ -90,7 +90,7 @@ module.exports.updatePropertyController =async (req,res,next)=>{
 
 module.exports.searchPropertyController = async (req, res, next) => {
     try {
-        const { location, price, amenities } = req.body;
+        const { location, minPrice,maxPrice } = req.body;
 
         const query = {
             ...(location && { location: { $regex: "location", $options: "i" } }),

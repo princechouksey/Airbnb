@@ -1,6 +1,6 @@
 const Redis = require('ioredis');
 
-// console.log('env---->', process.env.REDIS_HOST)
+console.log('env---->', process.env.REDIS_HOST)
 
 const cacheClient = new Redis({
     host: process.env.REDIS_HOST,
@@ -12,7 +12,7 @@ cacheClient.on("connect", () => {
     console.log("redis connected");
   });
   
-  cacheClient.on("error", () => {
-    console.log("error in running redis");
+  cacheClient.on("error", (err) => {
+    console.log("error in running redis", err);
   });
 module.exports = cacheClient;

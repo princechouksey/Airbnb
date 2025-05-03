@@ -3,6 +3,7 @@ const app = express();
 const userRoutes = require("./routes/user.route")
 const propertyRoutes = require("./routes/property.route")
 const bookingRoutes = require("./routes/booking.route")
+const paymentRoutes = require("./routes/payment.routes")
 const cookieParser = require("cookie-parser")
 const morgan = require("morgan")
 const errorHandler = require("./middlewares/errorHandler")
@@ -14,6 +15,7 @@ app.use(morgan("tiny"))
 app.use("/api/auth", userRoutes)
 app.use("/api/property", propertyRoutes)
 app.use("/api/booking", bookingRoutes)
+app.use("/api/payment", paymentRoutes)
 
 app.use(errorHandler)
 

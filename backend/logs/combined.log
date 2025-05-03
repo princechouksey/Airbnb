@@ -9,3 +9,5 @@ undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
 undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
 2025-04-26T05:29:52.976Z  error - 500 - Cannot read properties of undefined (reading '_id') - POST - /api/property/create - ::1
 2025-04-26T05:39:19.607Z  error - 500 - next is not defined - PUT - /api/property/update/680c7168fbaba36d7338d577 - ::1
+2025-05-01T09:00:22.868Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - POST - /api/property/create - ::1
+2025-05-01T09:00:22.872Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - GET - /api/auth/profile - ::1

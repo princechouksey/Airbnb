@@ -1,51 +1,100 @@
-const Booking = require('../models/booking.model');
-const Property = require('../models/property.model');
-const CustomError = require('../utils/customError');
-const paymentInstance = require('../services/payment.services');
-
+const Booking = require("../models/booking.model");
+const Property = require("../models/property.model");
+const CustomError = require("../utils/customError");
+const paymentInstance = require("../services/payment.services");
 
 const createBookingController = async (req, res, next) => {
-    try {
-      const { property_id, checkin_date, checkout_date, totalPrice } = req.body;
-  
-      const property = await Property.findById(property_id);
-      if (!property) return next(new CustomError("Property not found", 400));
-  
-      if (!property_id && !checkin_date && !checkout_date && !totalPrice)
-        return next(new CustomError("All fields are required", 400));
-  
-      const booking = await Booking.create({
-        property: property_id,
-        user_id: req.user._id,
-        checkin_date,
-        checkout_date,
-        totalPrice,
-        status: "Pending",
-      });
+  try {
+    const { property_id, checkin_date, checkout_date, totalPrice } = req.body;
 
-      const options = {
-        amount : totalPrice * 100, // amount in paise
-        currency : "INR",
-        receipt : `receipt_${booking._id}`,
-        payment_capture : 1,
+    const property = await Property.findById(property_id);
+    if (!property) return next(new CustomError("Property not found", 400));
 
-      }
-      const razorpayOrder = await paymentInstance.orders.create(options);
-      booking.razorpayOrderId = razorpayOrder.id;
-      await booking.save();
+    if (!property_id && !checkin_date && !checkout_date && !totalPrice)
+      return next(new CustomError("All fields are required", 400));
 
+    const booking = await Booking.create({
+      property: property_id,
+      user_id: req.user._id,
+      checkin_date,
+      checkout_date,
+      totalPrice,
+      status: "Pending",
+    });
 
-      // email -----------------------
-      res.status(200).json({
-        success: true,
-        data: booking,
-        amount: totalPrice,
-      });
-    }
-    catch(err){
-        next(new CustomError(err.message, 500));
+    const options = {
+      amount: totalPrice * 100, // amount in paise
+      currency: "INR",
+      receipt: `receipt_${booking._id}`,
+      payment_capture: 1,
+    };
+    const razorpayOrder = await paymentInstance.orders.create(options);
+    booking.razorpayOrderId = razorpayOrder.id;
+    await booking.save();
 
-    }
-}
+    const bookingTemplate = bookingConfirmationTemplate(
+      req.user.name,
+      property.location,
+      checkin_date,
+      checkout_date,
+      razorpayOrder
+    );
+    await sendEmail(
+      "princechouksey179@gmail.com",
+      "Booking Confirmation",
+      bookingTemplate
+    );
 
-module.exports = {createBookingController}
+    res.status(200).json({
+      success: true,
+      data: booking,
+      amount: totalPrice,
+    });
+  } catch (err) {
+    next(new CustomError(err.message, 500));
+  }
+};
+
+const viewBookingController = async (req, res, next) => {
+  const { userId } = req.params;
+  try {
+    if (!userId) return next(new CustomError("User id is required", 400));
+    const bookings = await Booking.find({ user_id: userId }).populate(
+      "user_id",
+      "username email"
+    );
+    if (!bookings) return next(new CustomError("No bookings found", 400));
+
+    res.status(200).json({
+      message: "Bookings fetched successfully",
+      success: true,
+      data: bookings,
+    });
+  } catch (error) {
+    next(new CustomError(error.message, 500));
+  }
+};
+
+const cancelBookingController = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    if (!id) return next(new CustomError("Booking id is required", 400));
+    const booking = await Booking.findById(id);
+    if (!booking) return next(new CustomError("Booking not found", 400));
+    if (booking.status === "Cancelled")
+      return next(new CustomError("Booking already cancelled", 400));
+    if (bookings.user_id.toString() !== req.user._id.toString())
+      return next(new CustomError("Unauthorized user", 401));
+
+    booking.status = "Cancelled";
+    await booking.save();
+
+    res.status(200).json({
+      message: "Booking cancelled successfully",
+      success: true,
+    });
+  } catch (error) {
+    next(new CustomError(error.message, 500));
+  }
+};
+module.exports = { createBookingController, viewBookingController , cancelBookingController };
