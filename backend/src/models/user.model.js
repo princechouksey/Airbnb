@@ -30,6 +30,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: ""            // default empty if not provided
     }
+    ,
+    isAdmin: {
+        type: Boolean,
+        default: false         // default value for admin status
+    },
 }, {
     timestamps: true           // adds createdAt and updatedAt fields
 });
