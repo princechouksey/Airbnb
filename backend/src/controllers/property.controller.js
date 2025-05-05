@@ -52,6 +52,10 @@ module.exports.deletePropertyContoller = async (req,res,next)=>{
 module.exports.updatePropertyController =async (req,res,next)=>{
     try {
         const { id } = req.params;
+        console.log("req.body--->", req.body)
+        console.log("id--->", id);
+        
+        
     
         if (!id) return next(new CustomError("property id is required", 400));
     
@@ -93,11 +97,15 @@ module.exports.searchPropertyController = async (req, res, next) => {
         const { location, minPrice,maxPrice } = req.body;
 
         const query = {
-            ...(location && { location: { $regex: "location", $options: "i" } }),
+            ...(location && { location: { $regex: location, $options: "i" } }),
             ...(minPrice && { price: { $gte: minPrice } }),
             ...(maxPrice && { price: { $lte: maxPrice } }),
         }
+        // console.log('query--->', query);
+        
         const property = await Property.find(query)
+        // console.log('property--->', property);
+        
         if (!property) return next(new CustomError("Property not found", 400));
  
      res.status(200).json({

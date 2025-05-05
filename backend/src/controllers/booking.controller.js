@@ -2,6 +2,8 @@ const Booking = require("../models/booking.model");
 const Property = require("../models/property.model");
 const CustomError = require("../utils/customError");
 const paymentInstance = require("../services/payment.services");
+const {bookingConfirmationTemplate }= require("../utils/emailTemplate.js");
+const sendEmail = require("../utils/email.js");
 
 const createBookingController = async (req, res, next) => {
   try {
@@ -12,6 +14,8 @@ const createBookingController = async (req, res, next) => {
 
     if (!property_id && !checkin_date && !checkout_date && !totalPrice)
       return next(new CustomError("All fields are required", 400));
+// console.log('property--->', property);
+    
 
     const booking = await Booking.create({
       property: property_id,
@@ -29,6 +33,8 @@ const createBookingController = async (req, res, next) => {
       payment_capture: 1,
     };
     const razorpayOrder = await paymentInstance.orders.create(options);
+    // console.log('razorpayOrder--->', razorpayOrder);
+    
     booking.razorpayOrderId = razorpayOrder.id;
     await booking.save();
 
@@ -40,7 +46,7 @@ const createBookingController = async (req, res, next) => {
       razorpayOrder
     );
     await sendEmail(
-      "princechouksey179@gmail.com",
+      "princechouksey137@gmail.com",
       "Booking Confirmation",
       bookingTemplate
     );
@@ -83,7 +89,7 @@ const cancelBookingController = async (req, res, next) => {
     if (!booking) return next(new CustomError("Booking not found", 400));
     if (booking.status === "Cancelled")
       return next(new CustomError("Booking already cancelled", 400));
-    if (bookings.user_id.toString() !== req.user._id.toString())
+    if (booking.user_id.toString() !== req.user._id.toString())
       return next(new CustomError("Unauthorized user", 401));
 
     booking.status = "Cancelled";

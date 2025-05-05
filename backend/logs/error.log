@@ -11,3 +11,82 @@ undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
 2025-04-26T05:39:19.607Z  error - 500 - next is not defined - PUT - /api/property/update/680c7168fbaba36d7338d577 - ::1
 2025-05-01T09:00:22.868Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - POST - /api/property/create - ::1
 2025-05-01T09:00:22.872Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - GET - /api/auth/profile - ::1
+2025-05-03T13:39:39.576Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - POST - /api/auth/logout - ::1
+2025-05-03T13:39:39.578Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - POST - /api/auth/logout - ::1
+2025-05-03T13:39:41.485Z  error - 500 - Please login to access this resource - POST - /api/auth/logout - ::1
+2025-05-03T13:42:27.810Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-05-03T13:44:07.075Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - POST - /api/auth/logout - ::1
+2025-05-03T13:44:07.076Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - GET - /api/auth/profile - ::1
+2025-05-03T14:05:12.837Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - POST - /api/auth/logout - ::1
+2025-05-03T14:05:12.843Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - GET - /api/auth/profile - ::1
+2025-05-03T14:05:12.845Z  error - 500 - Reached the max retries per request limit (which is 20). Refer to "maxRetriesPerRequest" option for details. - GET - /api/auth/profile - ::1
+2025-05-03T14:07:01.956Z  error - 500 - cacheClient.get is not a function - POST - /api/auth/logout - ::1
+2025-05-03T14:08:19.870Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-05-03T14:12:16.959Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-05-03T14:12:24.615Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-05-03T14:15:05.423Z  error - 500 - Error in updating property - PUT - /api/property/update/681623a9581b98d0c1f2a905 - ::1
+2025-05-03T14:15:48.190Z  error - 500 - Error in updating property - PUT - /api/property/update/681623a9581b98d0c1f2a905 - ::1
+2025-05-03T14:16:42.552Z  error - 500 - Error in updating property - PUT - /api/property/update/681623a9581b98d0c1f2a905 - ::1
+2025-05-03T14:23:07.246Z  error - 500 - Property not found - POST - /api/property/search - ::1
+2025-05-03T14:33:37.642Z  error - 500 -  - POST - /api/booking/create - ::1
+2025-05-03T14:34:24.938Z  error - 500 -  - POST - /api/booking/create - ::1
+2025-05-03T14:37:35.666Z  error - 500 -  - POST - /api/booking/create - ::1
+2025-05-03T14:39:03.899Z  error - 500 -  - POST - /api/booking/create - ::1
+2025-05-03T14:47:59.928Z  error - 500 -  - POST - /api/booking/create - ::1
+2025-05-03T14:48:54.799Z  error - 500 -  - POST - /api/booking/create - ::1
+2025-05-03T14:49:51.664Z  error - 500 - bookingConfirmationTemplate is not defined - POST - /api/booking/create - ::1
+2025-05-03T14:53:06.690Z  error - 500 - Cannot read properties of undefined (reading 'status') - POST - /api/booking/create - ::1
+2025-05-03T14:57:34.305Z  error - 500 - bookingConfirmationTemplate is not a function - POST - /api/booking/create - ::1
+2025-05-03T15:01:35.049Z  error - 500 - sendEmail is not a function - POST - /api/booking/create - ::1
+2025-05-03T15:02:25.416Z  error - 500 - connect ETIMEDOUT 64.233.170.108:465 - POST - /api/booking/create - ::1
+2025-05-03T15:03:49.475Z  error - 500 - connect ETIMEDOUT 64.233.170.108:465 - POST - /api/booking/create - ::1
+2025-05-03T15:04:52.808Z  error - 500 - connect ETIMEDOUT 64.233.170.108:465 - POST - /api/booking/create - ::1
+2025-05-03T15:09:06.557Z  error - 500 - connect ETIMEDOUT 172.253.118.109:465 - POST - /api/booking/create - ::1
+2025-05-03T15:13:03.635Z  error - 500 - connect ETIMEDOUT 142.250.4.108:465 - POST - /api/booking/create - ::1
+2025-05-03T15:15:15.389Z  error - 500 - connect ETIMEDOUT 142.250.4.108:587 - POST - /api/booking/create - ::1
+2025-05-03T15:17:59.721Z  error - 500 - connect ETIMEDOUT 142.250.4.108:465 - POST - /api/booking/create - ::1
+2025-05-03T15:19:19.081Z  error - 500 - connect ETIMEDOUT 142.250.4.108:587 - POST - /api/booking/create - ::1
+2025-05-03T15:26:39.590Z  error - 500 - connect ETIMEDOUT 64.233.170.108:587 - POST - /api/booking/create - ::1
+2025-05-03T15:27:59.603Z  error - 500 - connect ETIMEDOUT 64.233.170.108:587 - POST - /api/booking/create - ::1
+2025-05-04T04:03:37.400Z  error - 500 - Please login to access this resource - POST - /api/booking/create - ::1
+2025-05-04T04:04:12.871Z  error - 500 - connect ETIMEDOUT 142.250.4.108:587 - POST - /api/booking/create - ::1
+2025-05-04T04:10:40.060Z  error - 500 - sendEmail is not a function - POST - /api/booking/create - ::1
+2025-05-04T04:51:13.965Z  error - 500 - Booking id is required - PUT - /api/booking/6816ee13e32fe71c2ed6a1d2 - ::1
+2025-05-04T04:51:44.825Z  error - 500 - bookings is not defined - PUT - /api/booking/6816ee13e32fe71c2ed6a1d2 - ::1
+2025-05-04T05:05:14.747Z  error - 500 - CustomError is not defined - GET - /api/admin/all-users - ::1
+2025-05-04T05:06:37.790Z  error - 500 - CustomError is not defined - GET - /api/admin/all-users - ::1
+2025-05-04T05:07:21.636Z  error - 500 - CustomError is not defined - GET - /api/admin/all-users - ::1
+2025-05-04T05:07:44.660Z  error - 500 - Cannot read properties of undefined (reading 'isAdmin') - GET - /api/admin/all-users - ::1
+2025-05-04T05:08:54.101Z  error - 500 - Cannot read properties of undefined (reading 'isAdmin') - GET - /api/admin/all-users - ::1
+2025-05-04T05:09:20.597Z  error - 500 - Cannot read properties of undefined (reading 'isAdmin') - GET - /api/admin/all-users - ::1
+2025-05-04T05:14:03.133Z  error - 500 - Cannot read properties of undefined (reading 'isAdmin') - GET - /api/admin/all-users - ::1
+2025-05-04T05:15:35.474Z  error - 500 - Cannot read properties of undefined (reading 'isAdmin') - GET - /api/admin/all-users - ::1
+2025-05-04T05:16:43.163Z  error - 500 - Cannot read properties of undefined (reading 'isAdmin') - GET - /api/admin/all-users - ::1
+2025-05-04T05:17:04.599Z  error - 500 - CustomError is not defined - GET - /api/admin/all-users - ::1
+2025-05-04T05:17:37.838Z  error - 500 - CustomError is not defined - GET - /api/admin/all-users - ::1
+2025-05-04T05:18:01.165Z  error - 500 - CustomError is not defined - GET - /api/admin/all-users - ::1
+2025-05-04T05:18:58.513Z  error - 500 - CustomError is not defined - GET - /api/admin/all-users - ::1
+2025-05-04T05:19:14.377Z  error - 500 - CustomError is not defined - GET - /api/admin/all-users - ::1
+2025-05-04T05:19:26.496Z  error - 500 - CustomError is not defined - GET - /api/admin/all-users - ::1
+2025-05-04T05:19:49.215Z  error - 500 - CustomError is not defined - GET - /api/admin/all-users - ::1
+2025-05-04T05:21:53.230Z  error - 500 - Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle - GET - /api/admin/all-users - ::1
+2025-05-04T05:22:50.167Z  error - 500 - Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle - GET - /api/admin/all-users - ::1
+2025-05-04T05:23:34.617Z  error - 500 - Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle - GET - /api/admin/all-users - ::1
+2025-05-04T05:42:03.331Z  error - 500 - Booking is not defined - GET - /api/admin/all-booking - ::1
+2025-05-04T05:44:54.547Z  error - 500 - Property is not defined - GET - /api/admin/all-properties - ::1
+2025-05-04T05:47:13.718Z  error - 500 - Property not found - DELETE - /api/admin/delete-property/6816242d581b98d0c1f2a908 - ::1
+2025-05-04T07:06:00.981Z  error - 500 - User validation failed: username: Path `username` is required., phone: Path `phone` is required. - POST - /api/auth/register - ::1
+2025-05-04T07:06:07.910Z  error - 500 - User validation failed: username: Path `username` is required., phone: Path `phone` is required. - POST - /api/auth/register - ::1
+2025-05-05T14:13:33.952Z  error - 500 - Please login to access this resource - POST - /api/auth/logout - ::1

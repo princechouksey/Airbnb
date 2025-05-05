@@ -17,8 +17,8 @@ router.post(
     authMiddleware,
     viewBookingController
   );
-  router.delete(
-    "/userId",
+  router.put(
+    "/:id",
     authMiddleware,
     cancelBookingController
   );

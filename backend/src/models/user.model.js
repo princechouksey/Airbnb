@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
         type: Number,
         required: true,
         maxLength:10,
-        minLength:10,
+      
 
     },
     address: {

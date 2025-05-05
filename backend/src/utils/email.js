@@ -1,20 +1,31 @@
-const nodemailer = require("nodemailer");
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "devendradhote179@gmail.com",
-    pass: "qdcuulwjlujxhmxs",
-  },
-});
-exports.sendEmail = async (to, subject, htmlContent) => {
-  const mailOptions = {
-    from: "princechouksey179@gmail.com",
-    to,
-    subject,
-    html: htmlContent,
-  };
+const nodemailer  = require("nodemailer");
+
+const sendEmail = async (to, subject, html) => {
+  try {
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      service: "gmail", // or use Mailtrap / any SMTP service
+      port :587,
+      auth: {
+        user: process.env.GMAIL_USER, // your email address
+        pass: process.env.GMAIL_PASS, // your email password or app password
+       
+      },
+    });
+   // console.log('transporter--->', transporter);
+    
+
+    await transporter.sendMail({
+      from: process.env.GMAIL_USER, // sender address
+      to,
+      subject,
+      html, // ✅ use html instead of text
+    });
+
+    console.log("Email sent successfully ✅");
+  } catch (error) {
+    console.error("Email sending failed ❌", error);
+  }
 };
-return transporter.sendMail(mailOptions, (error, info) => {
-  if (err) console.log("error in sending email", error);
-  console.log("email sent successfully", info.response);
-});
+
+module.exports=  sendEmail;

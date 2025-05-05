@@ -7,7 +7,7 @@ router.post("/create", authMiddleware,propertyController.createPropertyControlle
 router.delete("/delete/:id",authMiddleware,propertyController.deletePropertyContoller)
 router.put("/update/:id",authMiddleware,propertyController.updatePropertyController)
 router.get("/get/:id",authMiddleware,propertyController.viewPropertyController)
-router.get("/search",authMiddleware, propertyController.searchPropertyController
+router.post("/search",authMiddleware, propertyController.searchPropertyController
   );
 
 

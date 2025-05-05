@@ -1,14 +1,20 @@
 const User = require("../models/user.model");
+const CustomError = require("../utils/customError");
+const Booking = require("../models/booking.model");
+const Property = require("../models/property.model");
 
 const getAllUserController = async (req, res, next) => {
   try {
-    const users = User.find();
+    const users = await  User.find();
+    console.log('users--->', users);
     if (!users) return next(new CustomError("No users found", 400));
     res.status(200).json({
       success: true,
       message: "Users fetched successfully",
       data: users,
     });
+    
+    
   } catch (error) {
     next(new CustomError(error.message, 500));
   }
