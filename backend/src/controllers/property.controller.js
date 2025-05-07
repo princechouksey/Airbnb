@@ -1,6 +1,7 @@
 const Property = require("../models/property.model");
 const CustomError = require("../utils/customError");
 const cacheClient = require("../services/cache.services");
+const Review = require("../models/review.model.js")
 
 module.exports.createPropertyController = async (req, res, next) => {
   try {
@@ -89,7 +90,9 @@ module.exports.updatePropertyController =async (req,res,next)=>{
             message: "Property fetched successfully",
             data: propertyDetails,
           });
-        } catch (error) {}
+        } catch (error) {
+          next(new CustomError(error,500))
+        }
 };
 
 module.exports.searchPropertyController = async (req, res, next) => {
@@ -117,3 +120,35 @@ module.exports.searchPropertyController = async (req, res, next) => {
    }
  };
  
+
+
+ module.exports.viewAllPropertyController = async (req, res, next) => {
+  try {
+    
+    const propertyDetails = await Property.find();
+    if (!propertyDetails)
+      return next(new CustomError("Error in fetching property data", 400));
+
+    res.status(200).json({
+      message: "Property fetched successfully",
+      data: propertyDetails,
+    });
+  } catch (error) {
+    next(new CustomError(error))
+  }
+};
+
+// Function to get all reviews for a specific property
+// controllers/reviewController.js
+module.exports.getReviewsByPropertyId = async (req, res) => {
+  try {
+    const propertyId = req.params.propertyId;
+    const reviews = await Review.find({ property: propertyId })
+      .populate({path:'user', select:"username"})
+    
+    res.status(200).json(reviews);
+  } catch (error) {
+    console.error("Error fetching reviews:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
