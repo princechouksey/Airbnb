@@ -117,3 +117,35 @@ undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
 2025-05-07T05:47:34.890Z  error - 400 - Unexpected non-whitespace character after JSON at position 173 - POST - /api/review/create - ::1
 2025-05-07T06:35:05.251Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
 2025-05-07T08:03:12.918Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-07T15:10:25.910Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-08T12:24:28.342Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-08T15:20:37.549Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-08T16:38:48.281Z  error - 500 - jwt expired - GET - /api/property/get/6818ce155d2cafb4750f1ce6 - ::1
+2025-05-08T16:38:49.225Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-08T16:38:51.651Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-09T02:10:55.914Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-09T02:11:01.313Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-09T02:18:22.573Z  error - 500 - Property not found - POST - /api/booking/create - ::1
+2025-05-09T02:20:30.426Z  error - 500 - Property not found - POST - /api/booking/create - ::1
+2025-05-09T14:28:24.857Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-09T14:29:19.879Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-09T14:30:05.276Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-09T14:32:37.634Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-09T14:33:02.080Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-09T14:33:17.979Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-09T14:51:28.204Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-09T15:05:49.858Z  error - 500 - Property not found - POST - /api/booking/create - ::1
+2025-05-09T17:03:15.567Z  error - 500 - jwt expired - GET - /api/property/get/6818ce155d2cafb4750f1ce6 - ::1
+2025-05-10T06:25:19.842Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T06:26:23.276Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T06:29:47.273Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T06:41:41.993Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T08:27:01.857Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T09:00:04.150Z  error - 500 - CustomError is not defined - POST - /api/payment/payment-verify - ::1
+2025-05-10T09:04:36.309Z  error - 500 - crypto.createHmac is not a function - POST - /api/payment/payment-verify - ::1
+2025-05-10T09:11:50.131Z  error - 500 - The "key" argument must be of type string or an instance of ArrayBuffer, Buffer, TypedArray, DataView, KeyObject, or CryptoKey. Received undefined - POST - /api/payment/payment-verify - ::1
+2025-05-10T09:12:10.660Z  error - 500 - The "key" argument must be of type string or an instance of ArrayBuffer, Buffer, TypedArray, DataView, KeyObject, or CryptoKey. Received undefined - POST - /api/payment/payment-verify - ::1
+2025-05-10T09:13:40.355Z  error - 500 - bookingConfirmationTemplate is not defined - POST - /api/payment/payment-verify - ::1
+2025-05-10T09:14:31.340Z  error - 500 - bookingConfirmationTemplate is not a function - POST - /api/payment/payment-verify - ::1
+2025-05-10T09:14:42.954Z  error - 500 - sendEmail is not defined - POST - /api/payment/payment-verify - ::1
+2025-05-10T09:43:20.324Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1

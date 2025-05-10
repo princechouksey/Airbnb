@@ -1,4 +1,9 @@
 const paymentInstance = require("../services/payment.services");
+const CustomError = require("../utils/customError")
+const Booking = require("../models/booking.model.js")
+const crypto = require("crypto")
+const {bookingConfirmationTemplate} = require("../utils/emailTemplate.js")
+const sendEmail = require("../utils/email.js")
 
 const processPaymentController = async (req, res, next) => {
   try {
@@ -33,7 +38,7 @@ const verifyPaymentController = async (req, res, next) => {
     if (!booking) return next(new CustomError("Booking not found", 400));
 
     const generatedSignature = crypto
-      .createHmac("sha256", process.env.RAZORPAY_SECRET)
+      .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
       .update(razorpayOrderId + "|" + razorpayPaymentId)
       .digest("hex");
 

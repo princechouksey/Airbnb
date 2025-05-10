@@ -60,7 +60,7 @@ const logoutUserController = async (req, res,next ) => {
         if(!token) {
             next(new CustomError("User unauthorized", 401));
         }
-        // const blackListToken = await cacheClient.set(token, "blacklisted", "EX", 3600);
+        const blackListToken = await cacheClient.set(token, "blacklisted", "EX", 3600);
         res.clearCookie("token")
         res.status(200).json({
             success: true,

@@ -3,9 +3,7 @@ const nodemailer  = require("nodemailer");
 const sendEmail = async (to, subject, html) => {
   try {
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
       service: "gmail", // or use Mailtrap / any SMTP service
-      port :587,
       auth: {
         user: process.env.GMAIL_USER, // your email address
         pass: process.env.GMAIL_PASS, // your email password or app password
@@ -28,4 +26,4 @@ const sendEmail = async (to, subject, html) => {
   }
 };
 
-module.exports=  sendEmail;
+module.exports = sendEmail;
