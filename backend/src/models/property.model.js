@@ -30,6 +30,8 @@ const mongoose = require("mongoose");
      ref: "User",
      required: true,
    },
+ }, {
+  timestamps:true
  });
  
  module.exports = mongoose.model("Property", propertySchema);

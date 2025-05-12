@@ -2,6 +2,7 @@ const Property = require("../models/property.model");
 const CustomError = require("../utils/customError");
 const cacheClient = require("../services/cache.services");
 const Review = require("../models/review.model.js")
+const User = require("../models/user.model.js")
 
 module.exports.createPropertyController = async (req, res, next) => {
   try {
@@ -29,6 +30,18 @@ module.exports.createPropertyController = async (req, res, next) => {
     if (!newProperty) {
       return next(new CustomError("Error in Creating Property ", 400));
     }
+     // Add the propertyId to the properties array of the user who created it
+    const user = await User.findById(req.user._id);
+
+    if (!user) {
+      return next(new CustomError("User not found", 404));
+    }
+
+     // Push the new propertyId into the user's properties array
+    user.properties.push(newProperty._id);
+
+    // Save the updated user document
+    await user.save();
     res
       .status(201)
       .json({ message: "Propety created successfully", data: newProperty });

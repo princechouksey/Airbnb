@@ -4,6 +4,8 @@ const CustomError = require("../utils/customError");
 const paymentInstance = require("../services/payment.services");
 const {bookingConfirmationTemplate }= require("../utils/emailTemplate.js");
 const sendEmail = require("../utils/email.js");
+const User = require("../models/user.model.js");
+
 
 const createBookingController = async (req, res, next) => {
   try {
@@ -25,6 +27,15 @@ const createBookingController = async (req, res, next) => {
       totalPrice,
       status: "Pending",
     });
+     // Add the propertyId to the properties array of the user who created it
+    const user = await User.findById(req.user._id);
+
+    if (!user) {
+      return next(new CustomError("User not found", 404));
+    }
+     user.bookings.push(booking._id)
+     await user.save();
+
 
     const options = {
       amount: totalPrice * 100, // amount in paise
@@ -103,4 +114,19 @@ const cancelBookingController = async (req, res, next) => {
     next(new CustomError(error.message, 500));
   }
 };
-module.exports = { createBookingController, viewBookingController , cancelBookingController };
+const getAllBookingsController = async (req, res, next) => {
+  try {
+    const booking = await Booking.find()
+  .populate('user_id', 'username email') // populate user details
+  .populate('property', 'title location'); 
+    if (!booking) return next(new CustomError("No bookings found", 400));
+    res.status(200).json({
+      success: true,
+      message: "Bookings fetched successfully",
+      data: booking,
+    });
+  } catch (error) {
+    next(new CustomError(error.message, 500));
+  }
+};
+module.exports = { createBookingController, viewBookingController , cancelBookingController, getAllBookingsController };

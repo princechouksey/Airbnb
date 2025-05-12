@@ -149,3 +149,75 @@ undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
 2025-05-10T09:14:31.340Z  error - 500 - bookingConfirmationTemplate is not a function - POST - /api/payment/payment-verify - ::1
 2025-05-10T09:14:42.954Z  error - 500 - sendEmail is not defined - POST - /api/payment/payment-verify - ::1
 2025-05-10T09:43:20.324Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-10T13:58:03.037Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T14:20:51.736Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T14:52:34.821Z  error - 500 - User is not defined - POST - /api/property/create - ::1
+2025-05-10T14:52:34.826Z  error - 500 - User is not defined - POST - /api/property/create - ::1
+2025-05-10T15:08:56.591Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-05-10T15:17:29.860Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T15:17:29.880Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-05-10T15:17:38.332Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T15:17:38.407Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-05-10T16:37:38.468Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T16:37:38.490Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-05-10T16:37:40.799Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-10T16:37:40.804Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-05-10T17:04:52.852Z  error - 500 - CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Property" - GET - /api/property/get/undefined - ::1
+2025-05-10T17:05:30.400Z  error - 500 - CastError: Cast to ObjectId failed for value "[object Object]" (type string) at path "_id" for model "Property" - GET - /api/property/get/[object%20Object] - ::1
+2025-05-10T17:38:23.721Z  error - 500 - jwt expired - PUT - /api/property/update/681f687a3b2236ffc682f3c1 - ::1
+2025-05-10T18:43:52.137Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-10T18:43:52.293Z  error - 500 - jwt expired - GET - /api/auth/profile - ::1
+2025-05-11T04:42:31.264Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-11T04:42:31.314Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-05-11T05:42:59.246Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-11T05:43:04.190Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-11T05:43:30.219Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-11T05:46:08.620Z  error - 500 - CastError: Cast to ObjectId failed for value "${property._id}" (type string) at path "_id" for model "Property" - GET - /api/property/get/$%7Bproperty._id%7D - ::1
+2025-05-11T05:46:38.561Z  error - 500 - CastError: Cast to ObjectId failed for value "${property._id}" (type string) at path "_id" for model "Property" - GET - /api/property/get/$%7Bproperty._id%7D - ::1
+2025-05-11T05:47:03.205Z  error - 500 - CastError: Cast to ObjectId failed for value "${property._id}" (type string) at path "_id" for model "Property" - GET - /api/property/get/$%7Bproperty._id%7D - ::1
+2025-05-11T05:47:05.398Z  error - 500 - CastError: Cast to ObjectId failed for value "${property._id}" (type string) at path "_id" for model "Property" - GET - /api/property/get/$%7Bproperty._id%7D - ::1
+2025-05-11T05:47:07.558Z  error - 500 - CastError: Cast to ObjectId failed for value "${property._id}" (type string) at path "_id" for model "Property" - GET - /api/property/get/$%7Bproperty._id%7D - ::1
+2025-05-11T05:47:16.280Z  error - 500 - CastError: Cast to ObjectId failed for value "${property._id}" (type string) at path "_id" for model "Property" - GET - /api/property/get/$%7Bproperty._id%7D - ::1
+2025-05-11T06:27:34.273Z  error - 500 - Please login to access this resource - GET - /api/booking/get-all-booking - ::1
+2025-05-11T06:29:08.315Z  error - 500 - Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override. - GET - /api/booking/get-all-booking - ::1
+2025-05-11T06:49:04.332Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-11T06:49:04.376Z  error - 500 - jwt expired - GET - /api/booking/get-all-booking - ::1
+2025-05-11T06:49:05.259Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-11T06:49:05.262Z  error - 500 - jwt expired - GET - /api/booking/get-all-booking - ::1
+2025-05-11T06:49:07.293Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-11T06:49:07.295Z  error - 500 - jwt expired - GET - /api/booking/get-all-booking - ::1
+2025-05-11T06:49:37.339Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-11T06:49:37.343Z  error - 500 - jwt expired - GET - /api/booking/get-all-booking - ::1
+2025-05-11T06:49:43.211Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-11T06:49:43.217Z  error - 500 - jwt expired - GET - /api/booking/get-all-booking - ::1
+2025-05-11T06:49:50.277Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-11T06:49:50.280Z  error - 500 - jwt expired - GET - /api/booking/get-all-booking - ::1
+2025-05-11T07:34:33.351Z  error - 500 - Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override. - POST - /api/payment/payment-verify - ::1
+2025-05-11T07:36:39.266Z  error - 500 - Payment validation failed: property: Path `property` is required. - POST - /api/payment/payment-verify - ::1
+2025-05-11T07:38:36.684Z  error - 500 - Payment validation failed: property: Path `property` is required. - POST - /api/payment/payment-verify - ::1
+2025-05-11T07:50:06.702Z  error - 500 - user_id is not defined - POST - /api/payment/payment-verify - ::1
+2025-05-11T07:54:04.956Z  error - 500 - jwt expired - GET - /api/property/get/6818ce385d2cafb4750f1ce9 - ::1
+2025-05-11T07:55:05.693Z  error - 500 - Payment validation failed: user: Cast to ObjectId failed for value "{ username: 'prince', email: undefined }" (type Object) at path "user" because of "BSONError" - POST - /api/payment/payment-verify - ::1
+2025-05-11T07:58:47.420Z  error - 500 - property is not defined - POST - /api/payment/payment-verify - ::1
+2025-05-11T17:11:26.222Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-11T17:11:26.237Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-05-11T17:11:33.330Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-05-11T17:11:33.335Z  error - 500 - Please login to access this resource - GET - /api/booking/get-all-booking - ::1
+2025-05-11T17:14:59.994Z  error - 500 - property is not defined - POST - /api/payment/payment-verify - ::1
+2025-05-11T17:18:45.995Z  error - 500 - property is not defined - POST - /api/payment/payment-verify - ::1
+2025-05-11T17:21:17.476Z  error - 500 - property is not defined - POST - /api/payment/payment-verify - ::1
+2025-05-11T17:23:33.619Z  error - 500 - property is not defined - POST - /api/payment/payment-verify - ::1
+2025-05-11T17:25:14.951Z  error - 500 - Payment validation failed: user: Cast to ObjectId failed for value "{ username: 'prince', email: 'princechouksey179@gmail.com' }" (type Object) at path "user" because of "BSONError" - POST - /api/payment/payment-verify - ::1
+2025-05-11T17:41:28.438Z  error - 500 - Cannot destructure property 'razorpayOrderId' of 'req.body' as it is undefined. - POST - /api/payment/payment-verify - ::1
+2025-05-11T17:41:30.263Z  error - 500 - Cannot destructure property 'razorpayOrderId' of 'req.body' as it is undefined. - POST - /api/payment/payment-verify - ::1
+2025-05-11T17:41:49.941Z  error - 500 - Cannot destructure property 'razorpayOrderId' of 'req.body' as it is undefined. - POST - /api/payment/payment-verify - ::1
+2025-05-11T17:43:46.259Z  error - 500 - Cannot destructure property 'razorpayOrderId' of 'req.body' as it is undefined. - POST - /api/payment/payment-verify - ::1
+2025-05-11T17:49:26.672Z  error - 500 - Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle - GET - /api/payment/get-payment - ::1
+2025-05-11T18:18:14.079Z  error - 500 - jwt expired - GET - /api/property/get-all - ::1
+2025-05-11T18:18:14.161Z  error - 500 - jwt expired - GET - /api/auth/profile - ::1
+2025-05-12T03:43:57.865Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-05-12T03:43:57.991Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1

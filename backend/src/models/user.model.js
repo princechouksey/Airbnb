@@ -35,6 +35,8 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false         // default value for admin status
     },
+    properties:[],
+    bookings :[],
 }, {
     timestamps: true           // adds createdAt and updatedAt fields
 });

@@ -13,6 +13,13 @@ router.post(
     authMiddleware,
     paymentController.verifyPaymentController
   );
+ router.get(
+    "/get-payment",
+    authMiddleware,
+    paymentController.getAllPaymentsController
+  );
+
+  router.delete("/payment/:id", paymentController.deletePaymentController);
 
 
 

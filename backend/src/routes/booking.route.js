@@ -1,5 +1,5 @@
 const express = require('express');
-const { createBookingController, viewBookingController, cancelBookingController } = require('../controllers/booking.controller');
+const { createBookingController, viewBookingController, cancelBookingController , getAllBookingsController } = require('../controllers/booking.controller');
 const authMiddleware = require('../middlewares/authMiddlware');
 const router = express.Router();
 
@@ -18,10 +18,11 @@ router.post(
     viewBookingController
   );
   router.put(
-    "/:id",
+    "/cancel/:id",
     authMiddleware,
     cancelBookingController
   );
+  router.get("/get-all-booking", authMiddleware, getAllBookingsController)
 
 
 module.exports = router;
