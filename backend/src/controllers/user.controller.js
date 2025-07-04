@@ -19,11 +19,12 @@ const registerUserController  =async (req,res, next)=>{
             address
         })
          const token = await user.generateAuthToken()
-        console.log("token--->", token);
+       
     
        res.cookie("token", token, {
-        httpOnly: true, // only accessible by the web server,
-        sameSite:"none",
+        httpOnly: true, // only accessible by the web server 
+        secure: true,         
+        sameSite: "None",
        })
         res.status(201).json({
          success: true,
