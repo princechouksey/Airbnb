@@ -42,7 +42,7 @@ const loginUserController = async (req, res,next) => {
     try {
         const user = await User.authenticateUser(email, password);
         const token = await user.generateAuthToken()
-        res.cookie("token", newToken, {
+        res.cookie("token", token, {
         httpOnly: true,
         secure: true,
         sameSite: "None",
@@ -66,7 +66,8 @@ const logoutUserController = async (req, res,next ) => {
         if(!token) {
             next(new CustomError("User unauthorized", 401));
         }
-        const blackListToken = await cacheClient.set(token, "blacklisted", "EX", 3600);
+       const jwtExpiry = 24 * 60 * 60; // 1 day
+        const blackListToken = await cacheClient.set(token, "blacklisted", "EX", jwtExpiry);
         res.clearCookie("token")
         res.status(200).json({
             success: true,
@@ -106,7 +107,7 @@ const updateUserProfileController = async (req,res,next)=>{
         if(address) user.address = address;
        let newToken = null;
        if (newPassword) {
-       newToken = await user.generateAuthToken(newPassword);
+       newToken = await user.generateAuthToken();
        user.password = newPassword;
       }
         await user.save();
