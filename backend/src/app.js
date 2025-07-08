@@ -15,8 +15,8 @@ const passport = require("passport")
 
 const cors = require("cors")
 app.use(cors({
-    origin:true,
-    credentials:true
+   origin: "https://airbnb-three-indol.vercel.app",
+  credentials: true,
 }))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
