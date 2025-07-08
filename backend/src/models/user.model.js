@@ -52,7 +52,7 @@ const userSchema = new mongoose.Schema({
 
 // Hash password before saving (manual signup only)
 userSchema.pre("save", async function (next) {
-  if (this.isModified("password") && !this.googleId) {
+  if (this.isModified("password") ) {
     this.password = await bcrypt.hash(this.password, 10);
   }
   next();

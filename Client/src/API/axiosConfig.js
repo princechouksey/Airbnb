@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://airbnb-yfw9.onrender.com/api",
+  baseURL: "http://localhost:3000/api",
   withCredentials: true,
 });
 

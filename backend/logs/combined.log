@@ -353,3 +353,12 @@ undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
 2025-07-06T13:48:54.965Z  error - 500 - Assignment to constant variable. - PUT - /api/auth/update - ::1
 2025-07-06T14:03:11.890Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
 2025-07-06T14:03:11.899Z  error - 500 - Please login to access this resource - GET - /api/booking/get-all-booking - ::1
+2025-07-08T18:03:49.704Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-08T18:03:49.715Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-08T18:06:55.769Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-08T18:07:00.967Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-08T18:07:07.734Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-08T18:07:14.260Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-08T18:08:33.600Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-08T18:08:59.453Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-08T18:12:53.680Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
