@@ -221,3 +221,135 @@ undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
 2025-05-11T18:18:14.161Z  error - 500 - jwt expired - GET - /api/auth/profile - ::1
 2025-05-12T03:43:57.865Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
 2025-05-12T03:43:57.991Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-03T16:48:32.781Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-03T16:48:32.797Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-03T16:48:39.936Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-03T16:48:39.944Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-03T16:48:41.987Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-03T16:48:41.992Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-03T16:49:06.746Z  error - 500 - Please login to access this resource - POST - /api/property/create - ::1
+2025-07-03T16:49:06.765Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-03T16:49:06.769Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-03T16:49:11.015Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-03T16:49:11.020Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-03T16:51:15.960Z  error - 500 - Please login to access this resource - POST - /api/property/create - ::1
+2025-07-03T16:51:15.975Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-03T16:51:15.981Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-03T16:54:34.270Z  error - 500 - No payment found - GET - /api/payment/get-payment - ::1
+2025-07-03T17:17:04.294Z  error - 500 - No payment found - GET - /api/payment/get-payment - ::1
+2025-07-03T17:20:13.973Z  error - 500 - No payment found - GET - /api/payment/get-payment - ::1
+2025-07-05T16:59:07.389Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-05T16:59:07.402Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-05T17:58:26.781Z  error - 500 - User Not Found  - POST - /api/booking/create - ::1
+2025-07-05T18:16:20.547Z  error - 500 - jwt is not defined - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:16:56.996Z  error - 500 - secretOrPrivateKey must have a value - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:17:46.538Z  error - 500 - secretOrPrivateKey must have a value - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:18:05.267Z  error - 500 - secretOrPrivateKey must have a value - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:18:15.132Z  error - 500 - secretOrPrivateKey must have a value - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:18:58.119Z  error - 500 - secretOrPrivateKey must have a value - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:20:02.135Z  error - 500 - secretOrPrivateKey must have a value - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:21:54.908Z  error - 500 - secretOrPrivateKey must have a value - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:22:28.346Z  error - 500 - secretOrPrivateKey must have a value - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:22:48.757Z  error - 500 - secretOrPrivateKey must have a value - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:23:24.290Z  error - 500 - resetPasswordTemplate is not defined - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:26:38.324Z  error - 500 - Cannot read properties of undefined (reading 'userName') - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:27:51.051Z  error - 500 - Cannot read properties of undefined (reading 'userName') - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:28:37.363Z  error - 500 - Cannot read properties of undefined (reading 'username') - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:29:31.352Z  error - 500 - Cannot read properties of undefined (reading 'username') - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:29:52.968Z  error - 500 - sendMail is not defined - POST - /api/auth/forgot-password - ::1
+2025-07-05T18:56:22.088Z  error - 500 - User validation failed: username: Path `username` is required., email: Path `email` is required., password: Path `password` is required., phone: Path `phone` is required. - POST - /api/auth/reset-password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjZiNGQ5MWRkYTM4NDA5Njg1ZDJhZCIsImlhdCI6MTc1MTc0MTM0OCwiZXhwIjoxNzUxNzQxOTQ4fQ.zfkxD-ajqtna-PPUhYMUGhTjsXTzEysEs7hVCWuu_XA - ::1
+2025-07-05T18:59:06.161Z  error - 500 - User validation failed: username: Path `username` is required., email: Path `email` is required., password: Path `password` is required., phone: Path `phone` is required. - POST - /api/auth/reset-password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjZiNGQ5MWRkYTM4NDA5Njg1ZDJhZCIsImlhdCI6MTc1MTc0MTM0OCwiZXhwIjoxNzUxNzQxOTQ4fQ.zfkxD-ajqtna-PPUhYMUGhTjsXTzEysEs7hVCWuu_XA - ::1
+2025-07-05T18:59:11.067Z  error - 500 - User validation failed: username: Path `username` is required., email: Path `email` is required., password: Path `password` is required., phone: Path `phone` is required. - POST - /api/auth/reset-password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjZiNGQ5MWRkYTM4NDA5Njg1ZDJhZCIsImlhdCI6MTc1MTc0MTM0OCwiZXhwIjoxNzUxNzQxOTQ4fQ.zfkxD-ajqtna-PPUhYMUGhTjsXTzEysEs7hVCWuu_XA - ::1
+2025-07-05T19:00:59.763Z  error - 500 - User validation failed: username: Path `username` is required., email: Path `email` is required., password: Path `password` is required., phone: Path `phone` is required. - POST - /api/auth/reset-password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NjZiNGQ5MWRkYTM4NDA5Njg1ZDJhZCIsImlhdCI6MTc1MTc0MTM0OCwiZXhwIjoxNzUxNzQxOTQ4fQ.zfkxD-ajqtna-PPUhYMUGhTjsXTzEysEs7hVCWuu_XA - ::1
+2025-07-05T19:13:52.700Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-05T19:13:52.716Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-05T19:13:57.077Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-05T19:13:57.081Z  error - 500 - Please login to access this resource - GET - /api/booking/get-all-booking - ::1
+2025-07-05T19:19:09.792Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-05T19:19:16.148Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-05T19:19:24.051Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-05T19:19:58.609Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-05T19:20:08.167Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-05T19:21:15.178Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-06T10:36:06.241Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T10:36:06.262Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T10:39:11.027Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T10:39:11.046Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T10:45:38.543Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T10:45:38.554Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T10:45:53.817Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T10:45:53.826Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T10:47:06.228Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T10:47:06.243Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T10:52:34.253Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T10:52:34.260Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T10:53:14.968Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T10:53:14.983Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:02:20.426Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:02:20.469Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:03:33.346Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:03:33.377Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:05:21.191Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:05:21.239Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:06:26.689Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:06:26.702Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:07:52.276Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:07:52.301Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:08:47.010Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:08:47.035Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:12:16.546Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:12:16.551Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:12:28.493Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:12:28.497Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:12:40.311Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:12:40.315Z  error - 500 - Please login to access this resource - GET - /api/booking/get-all-booking - ::1
+2025-07-06T11:13:37.785Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:13:37.788Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:18:39.993Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/property/get-all - ::1
+2025-07-06T11:18:40.003Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/auth/profile - ::1
+2025-07-06T11:19:13.697Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/property/get-all - ::1
+2025-07-06T11:19:13.699Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/auth/profile - ::1
+2025-07-06T11:20:28.966Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/property/get-all - ::1
+2025-07-06T11:20:28.984Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/auth/profile - ::1
+2025-07-06T11:20:51.853Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/property/get-all - ::1
+2025-07-06T11:20:51.857Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/auth/profile - ::1
+2025-07-06T11:22:21.206Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:22:21.216Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:33:04.378Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T11:33:04.388Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T11:33:08.361Z  error - 500 - Please login to access this resource - POST - /api/auth/logout - ::1
+2025-07-06T11:33:54.759Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/property/get-all - ::1
+2025-07-06T11:33:54.773Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/auth/profile - ::1
+2025-07-06T11:34:03.227Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/property/get-all - ::1
+2025-07-06T11:34:03.230Z  error - 500 - Cast to ObjectId failed for value "111452449498403419098" (type string) at path "_id" for model "User" - GET - /api/booking/get-all-booking - ::1
+2025-07-06T11:36:51.607Z  error - 500 - User Not Found  - GET - /api/property/get-all - ::1
+2025-07-06T11:36:51.616Z  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+2025-07-06T11:38:38.826Z  error - 500 - User Not Found  - GET - /api/property/get-all - ::1
+2025-07-06T11:38:38.830Z  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+2025-07-06T11:39:23.488Z  error - 500 - User Not Found  - GET - /api/property/get-all - ::1
+2025-07-06T11:39:23.496Z  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+2025-07-06T11:41:37.471Z  error - 500 - User Not Found  - POST - /api/property/create - ::1
+2025-07-06T11:41:37.750Z  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+2025-07-06T11:41:37.754Z  error - 500 - User Not Found  - GET - /api/property/get-all - ::1
+2025-07-06T11:51:03.021Z  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+2025-07-06T11:51:03.059Z  error - 500 - User Not Found  - GET - /api/property/get-all - ::1
+2025-07-06T11:54:44.516Z  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+2025-07-06T11:54:44.526Z  error - 500 - User Not Found  - GET - /api/property/get-all - ::1
+2025-07-06T12:04:59.065Z  error - 500 - User Not Found  - GET - /api/property/get-all - ::1
+2025-07-06T12:04:59.072Z  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
+2025-07-06T12:55:13.263Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T12:55:13.278Z  error - 500 - Please login to access this resource - GET - /api/booking/get-all-booking - ::1
+2025-07-06T12:55:17.638Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T12:55:17.643Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T13:00:04.578Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T13:00:04.586Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-06T13:02:37.382Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T13:43:46.510Z  error - 500 - password is not defined - PUT - /api/auth/update - ::1
+2025-07-06T13:43:55.711Z  error - 500 - password is not defined - PUT - /api/auth/update - ::1
+2025-07-06T13:44:55.608Z  error - 500 - user.generateAuthToken is not a function - PUT - /api/auth/update - ::1
+2025-07-06T13:45:22.017Z  error - 500 - user.generateAuthToken is not a function - PUT - /api/auth/update - ::1
+2025-07-06T13:46:18.566Z  error - 500 - user.generateAuthToken is not a function - PUT - /api/auth/update - ::1
+2025-07-06T13:47:34.594Z  error - 500 - user.generateAuthToken is not a function - PUT - /api/auth/update - ::1
+2025-07-06T13:48:54.965Z  error - 500 - Assignment to constant variable. - PUT - /api/auth/update - ::1
+2025-07-06T14:03:11.890Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-06T14:03:11.899Z  error - 500 - Please login to access this resource - GET - /api/booking/get-all-booking - ::1

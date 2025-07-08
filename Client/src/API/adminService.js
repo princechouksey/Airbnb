@@ -27,8 +27,7 @@ export const DeleteUser =async (id)=>{
     }
 }
 
-export 
-          const getAllBooking=async ()=>{
+export  const getAllBooking=async ()=>{
     try {
         const res = await axios.get("/admin/all-booking")
         toast.success(res.data.message)
@@ -40,7 +39,7 @@ export
     }
 }
 
-const getAllProperties =async ()=>{
+export const getAllProperties =async ()=>{
     try {
         const res = await axios.get("/admin/all-properties")
         toast.success(res.data.message)
@@ -51,7 +50,7 @@ const getAllProperties =async ()=>{
         
     }
 }
-const deleteProperty =async ()=>{
+export const deleteProperty =async (id)=>{
     try {
         const res = await axios.get(`/admin/delete-property/${id}`)
         toast.success(res.data.message)
@@ -62,7 +61,7 @@ const deleteProperty =async ()=>{
         
     }
 }
-const deleteBooking =async ()=>{
+export const deleteBooking =async (id)=>{
     try {
         const res = await axios.get(`/delete-booking/${id}`)
         toast.success(res.data.message)

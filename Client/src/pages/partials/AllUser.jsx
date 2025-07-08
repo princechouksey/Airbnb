@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { DeleteUser, getAllUser } from "../../API/adminService";
 
 const AllUser = () => {

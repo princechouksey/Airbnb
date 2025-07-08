@@ -19,9 +19,9 @@ const bookingConfirmationTemplate = (
     `;
 };
 
-const resetPasswordTemplate = (userName, link) => {
+const resetPasswordTemplate = (email, link) => {
   return `
-  <h2>Hello, ${userName}</h2>
+  <h2>Hello, ${email}</h2>
     <p>Reset password link</p>
     <ul>
         <li><strong>Reset link:</strong> ₹${link}</li>

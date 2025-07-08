@@ -2,6 +2,12 @@ const User  = require("../models/user.model")
 const cookie = require("cookie")
 const CustomError = require("../utils/customError");
 const cacheClient = require("../services/cache.services");
+const jwt = require("jsonwebtoken");
+const {resetPasswordTemplate} = require("../utils/emailTemplate")
+const sendMail = require("../utils/email")
+const bcrypt = require("bcrypt");
+const generateAuthToken = require("../models/user.model");
+
 
 
 const registerUserController  =async (req,res, next)=>{
@@ -88,7 +94,7 @@ const currentUserController = async (req,res,next)=>{
 const updateUserProfileController = async (req,res,next)=>{
     try {
       const   {username, email, phone, address, newPassword} = req.body;
-      const user  = User.findOne({email})
+      const user  = await  User.findOne({email})
         if(!user) {
             return res.status(400).json({message: "User not found"})
         }
@@ -96,10 +102,10 @@ const updateUserProfileController = async (req,res,next)=>{
         if(email) user.email = email;
         if(phone) user.phone = phone;
         if(address) user.address = address;
-        const newToken = null;
+        let  newToken = null;
 
-        if(password) {
-            newToken = await user.generateAuthToken(newPassword)
+        if(newPassword) {
+            newToken = await user.generateAuthToken()
             user.password = newPassword;
         }
 
@@ -134,12 +140,14 @@ const resetUserPasswordController = async (req,res,next)=>{
         if(!user) {
             return next(new CustomError("User not found", 400));
         }
+        console.log(process.env.JWT_RAW_SECRET);
         const rawToken = jwt.sign({ id: user._id }, process.env.JWT_RAW_SECRET, {
             expiresIn: "10m",
           });
-          const resetLink = `http://localhost/api/user/reset-password/${rawToken}`;
-          const emailTemplate = resetPasswordTemplate(req.user.userName, resetLink);
-          await sendMail("princechouksey179@gmail.com", "Reset password", emailTemplate);
+          const resetLink = `http://localhost:5173/reset-password/${rawToken}`;
+         
+          const emailTemplate = resetPasswordTemplate(email , resetLink);
+          await sendMail(email, "Reset password", emailTemplate);
           res.status(200).json({
             success: true,
             message: "reset password link shared on your gmail",
@@ -153,6 +161,43 @@ const resetUserPasswordController = async (req,res,next)=>{
         
     }
 }
+
+
+// POST /api/user/reset-password/:token
+const resetPasswordController = async (req, res, next) => {
+  try {
+    const { token } = req.params;
+    const { newPassword } = req.body;
+    console.log(token, newPassword);
+
+    if (!newPassword) {
+      return res.status(400).json({ message: "Password is required" });
+    }
+
+    // Verify token
+    const decoded = jwt.verify(token, process.env.JWT_RAW_SECRET);
+    const user = await User.findById(decoded.id);
+    if (!user) {
+      return res.status(400).json({ message: "User not found" });
+    }
+
+    //  Update password
+    user.password = newPassword;
+    await user.save();
+
+    return res.status(200).json({ message: "Password reset successful!" });
+  } catch (err) {
+    console.error("Reset password error:", err);
+    return res.status(400).json({
+      message: err.message === "jwt expired"
+        ? "Reset link expired. Please try again."
+        : "Invalid or expired token.",
+    });
+  }
+};
+
+module.exports = { };
+
 module.exports ={ registerUserController, loginUserController, logoutUserController, currentUserController
-    , updateUserProfileController, resetUserPasswordController 
+    , updateUserProfileController, resetUserPasswordController , resetPasswordController 
 }

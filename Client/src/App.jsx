@@ -18,6 +18,9 @@ import AllUser from "./pages/partials/AllUser";
 import AllPayment from "./pages/partials/AllPayment";
 import Allproperties from "./pages/partials/AllProperties";
 import AllBookings from "./pages/partials/AllBookings";
+import ResetPassword from "./pages/partials/ResetPassword";
+import UpdateProfile from "./pages/partials/UpdateProfile";
+
 
 const App = () => {
 
@@ -40,9 +43,14 @@ const App = () => {
         <Route path="/property/get/:id" element={<SingleProperty />} />
         <Route path="/Booking/:id" element={<BookingPage />} />
         <Route path="/profile/" element={<ProfilePage />} />
-
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/update-profile" element={<UpdateProfile />} />
+        
+        {/* Protected Routes */}
+        
+
         <Route
           path="/dashboard"
           element={

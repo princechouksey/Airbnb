@@ -6,13 +6,26 @@ import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter } from "react-router-dom";
-import { Toaster, toast } from 'sonner';
+
 
 createRoot(document.getElementById("root")).render(
     <Provider store={store}>
         <BrowserRouter>
             <App />
-           <Toaster richColors />
+          <ToastContainer
+  position="top-center"
+  autoClose={3000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  theme="light"
+  
+/>
+ 
         </BrowserRouter>
     </Provider>
 );
