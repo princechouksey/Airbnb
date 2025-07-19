@@ -15,7 +15,7 @@ const passport = require("passport")
 
 const cors = require("cors")
 app.use(cors({
-   origin: "http://localhost:5173", // Change this to your frontend URL
+   origin: "https://airbnb-three-indol.vercel.app/", // Change this to your frontend URL
   credentials: true,
 }))
 app.use(express.json())
