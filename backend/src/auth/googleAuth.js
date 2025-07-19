@@ -73,7 +73,7 @@ router.get(
       });
 
       // ✅ Redirect to frontend without exposing token in URL
-      res.redirect(`${process.env.FRONTEND_URL}/`);
+      res.redirect("https://airbnb-three-indol.vercel.app/");
     } catch (error) {
       console.error("Error during Google callback:", error);
       res.status(500).send("Internal Server Error");
