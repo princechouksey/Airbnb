@@ -6,7 +6,6 @@ const jwt = require("jsonwebtoken");
 const {resetPasswordTemplate} = require("../utils/emailTemplate")
 const sendMail = require("../utils/email")
 const bcrypt = require("bcrypt");
-const generateAuthToken = require("../models/user.model");
 
 
 
@@ -28,9 +27,9 @@ const registerUserController  =async (req,res, next)=>{
        
     
        res.cookie("token", token, {
-        httpOnly: true, // only accessible by the web server 
-        secure: true,         
+        httpOnly: true, // only accessible by the web server   
         sameSite: "None",
+        maxAge: 24 * 60 * 60 * 1000 
        })
         res.status(201).json({
          success: true,
@@ -48,12 +47,13 @@ const loginUserController = async (req, res,next) => {
     try {
         const user = await User.authenticateUser(email, password);
         const token = await user.generateAuthToken()
-        res.cookie("token", token, {
-        httpOnly: true,
-        secure: true,
-        sameSite: "None",
-        maxAge: 24 * 60 * 60 * 1000,
-        });
+       res.cookie("token", token, {
+    httpOnly: true,
+    sameSite: "None",
+    secure: true,                // MUST be present when sameSite is 'None'
+    maxAge: 24 * 60 * 60 * 1000,
+});
+
         res.status(200).json({
             success: true,
             message: "User logged in successfully",
@@ -119,7 +119,7 @@ const updateUserProfileController = async (req,res,next)=>{
 
 
        let newToken = null;
-       if (newPassword) {
+       if (username || email || phone || address || newPassword) {
        newToken = await user.generateAuthToken();
        user.password = newPassword;
       }
@@ -130,7 +130,6 @@ const updateUserProfileController = async (req,res,next)=>{
         }
        res.cookie("token", newToken, {
        httpOnly: true,
-       secure: true,
        sameSite: "None",
        maxAge: 24 * 60 * 60 * 1000,
 });
@@ -186,7 +185,7 @@ const resetUserPasswordController = async (req,res,next)=>{
 }
 
 
-// POST /api/user/reset-password/:token
+// // POST /api/user/reset-password/:token
 const resetPasswordController = async (req, res, next) => {
   try {
     const { token } = req.params;

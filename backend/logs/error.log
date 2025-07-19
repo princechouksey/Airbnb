@@ -362,3 +362,27 @@ undefined  error - 500 - User Not Found  - GET - /api/auth/profile - ::1
 2025-07-08T18:08:33.600Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
 2025-07-08T18:08:59.453Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
 2025-07-08T18:12:53.680Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-15T08:19:45.128Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-15T08:19:45.148Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-15T08:19:56.363Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-15T08:19:58.992Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-15T08:20:07.222Z  error - 500 - Invalid email or password - POST - /api/auth/login - ::1
+2025-07-15T08:21:06.841Z  error - 500 - error while generating new jwt token - PUT - /api/auth/update - ::1
+2025-07-15T08:21:51.490Z  error - 500 - error while generating new jwt token - PUT - /api/auth/update - ::1
+2025-07-15T08:22:12.676Z  error - 500 - error while generating new jwt token - PUT - /api/auth/update - ::1
+2025-07-15T08:26:28.310Z  error - 500 - Please login to access this resource - POST - /api/auth/logout - ::1
+2025-07-15T08:26:57.418Z  error - 500 - error while generating new jwt token - PUT - /api/auth/update - ::1
+2025-07-15T08:27:52.918Z  error - 500 - error while generating new jwt token - PUT - /api/auth/update - ::1
+2025-07-15T08:36:16.307Z  error - 500 - User validation failed: password: Path `password` is required. - PUT - /api/auth/update - ::1
+2025-07-19T16:42:51.851Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-19T16:42:51.865Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-19T16:43:10.588Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-19T16:43:10.595Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-19T16:43:13.266Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-19T16:43:13.275Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-19T16:43:24.480Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-19T16:43:24.488Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-19T16:44:16.124Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-19T16:44:16.135Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
+2025-07-19T16:48:05.802Z  error - 500 - Please login to access this resource - GET - /api/property/get-all - ::1
+2025-07-19T16:48:05.844Z  error - 500 - Please login to access this resource - GET - /api/auth/profile - ::1
