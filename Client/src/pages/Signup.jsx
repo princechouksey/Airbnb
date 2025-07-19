@@ -21,7 +21,7 @@ const Signup = ({ display, setDisplay }) => {
 
   const handleGoogleLogin = () => {
     // Redirect to backend's Google auth route
-    window.location.href = "http://localhost:3000/auth/google";
+    window.location.href ="https://airbnb-yfw9.onrender.com/auth/google";
   };
 
   return (
